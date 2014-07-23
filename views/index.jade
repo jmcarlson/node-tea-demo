@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1 World Market Teas!
+	//- Container will be <div>
+	.products
+		for product in teaProducts
+			.product
+				//- Literals work also, not sure...
+				h2=product.name
+				//- Use below if you want to include
+				//- static/literal values
+				//- h2 Tea: #{product.name}
+				p
+					b Price: 
+					| #{product.price}
+				p
+					b Origin: 
+					| #{product.origin}
